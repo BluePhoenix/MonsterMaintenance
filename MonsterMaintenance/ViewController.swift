@@ -19,6 +19,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "creatureDies", userInfo: nil, repeats: false)
+        
+        heartButton.dropTarget = monsterImage
+        foodButton.dropTarget = monsterImage
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDroppedOnCharacter:", name: "onTargetDropped", object: nil)
     }
     
     func creatureDies() {
@@ -29,6 +34,10 @@ class ViewController: UIViewController {
 
     func creatureRevives() {
         monsterImage.playReviveAnimation()
+    }
+    
+    func itemDroppedOnCharacter(notification: NSNotification) {
+        print("Item dropped")
     }
 
 }

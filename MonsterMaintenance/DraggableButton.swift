@@ -11,6 +11,7 @@ import UIKit
 
 class DraggableButton: UIButton {
     var originalCenter: CGPoint!
+    var dropTarget: UIView?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,6 +32,15 @@ class DraggableButton: UIButton {
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        // Check if we dropped it over the correct target
+        if let touch = touches.first, target = dropTarget {
+            let position = touch.locationInView(self.superview)
+            if CGRectContainsPoint(target.frame, position) {
+                NSNotificationCenter.defaultCenter().postNotificationName("onTargetDropped", object: nil)
+            }
+        }
+        
         self.center = originalCenter
     }
 }
