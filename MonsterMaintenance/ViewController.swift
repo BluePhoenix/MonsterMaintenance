@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var monsterImage: UIImageView!
+    @IBOutlet weak var heartButton: UIButton!
+    @IBOutlet weak var foodButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

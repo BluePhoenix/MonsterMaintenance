@@ -129,6 +129,8 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="foodButton" destination="7mK-tj-fvt" id="Yja-PF-eOF"/>
+                        <outlet property="heartButton" destination="qLJ-q4-bvb" id="2Go-6L-hxn"/>
                         <outlet property="monsterImage" destination="m5x-X7-MoW" id="l2X-29-cjI"/>
                     </connections>
                 </viewController>
