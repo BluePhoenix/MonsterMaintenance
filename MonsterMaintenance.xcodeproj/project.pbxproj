@@ -15,6 +15,11 @@
 		CE7EDC681C1CF18F00DF736D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7EDC661C1CF18F00DF736D /* LaunchScreen.storyboard */; };
 		CE7EDC731C1CF18F00DF736D /* MonsterMaintenanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7EDC721C1CF18F00DF736D /* MonsterMaintenanceTests.swift */; };
 		CE7EDC7E1C1CF19000DF736D /* MonsterMaintenanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7EDC7D1C1CF19000DF736D /* MonsterMaintenanceUITests.swift */; };
+		CE890ED81C1DF3DF0062D72A /* bite.wav in Resources */ = {isa = PBXBuildFile; fileRef = CE890ED31C1DF3DF0062D72A /* bite.wav */; };
+		CE890ED91C1DF3DF0062D72A /* cave-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE890ED41C1DF3DF0062D72A /* cave-music.mp3 */; };
+		CE890EDA1C1DF3DF0062D72A /* death.wav in Resources */ = {isa = PBXBuildFile; fileRef = CE890ED51C1DF3DF0062D72A /* death.wav */; };
+		CE890EDB1C1DF3DF0062D72A /* heart.wav in Resources */ = {isa = PBXBuildFile; fileRef = CE890ED61C1DF3DF0062D72A /* heart.wav */; };
+		CE890EDC1C1DF3DF0062D72A /* skull.wav in Resources */ = {isa = PBXBuildFile; fileRef = CE890ED71C1DF3DF0062D72A /* skull.wav */; };
 		CEB4A2771C1DBC7900704E76 /* DraggableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4A2761C1DBC7900704E76 /* DraggableButton.swift */; };
 		CEB4A2791C1DC98800704E76 /* MonsterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4A2781C1DC98800704E76 /* MonsterImageView.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +56,11 @@
 		CE7EDC791C1CF19000DF736D /* MonsterMaintenanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonsterMaintenanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7EDC7D1C1CF19000DF736D /* MonsterMaintenanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMaintenanceUITests.swift; sourceTree = "<group>"; };
 		CE7EDC7F1C1CF19000DF736D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE890ED31C1DF3DF0062D72A /* bite.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bite.wav; sourceTree = "<group>"; };
+		CE890ED41C1DF3DF0062D72A /* cave-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cave-music.mp3"; sourceTree = "<group>"; };
+		CE890ED51C1DF3DF0062D72A /* death.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = death.wav; sourceTree = "<group>"; };
+		CE890ED61C1DF3DF0062D72A /* heart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = heart.wav; sourceTree = "<group>"; };
+		CE890ED71C1DF3DF0062D72A /* skull.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = skull.wav; sourceTree = "<group>"; };
 		CEB4A2761C1DBC7900704E76 /* DraggableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableButton.swift; sourceTree = "<group>"; };
 		CEB4A2781C1DC98800704E76 /* MonsterImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +93,7 @@
 		CE7EDC4E1C1CF18F00DF736D = {
 			isa = PBXGroup;
 			children = (
+				CE890ED21C1DF3C70062D72A /* Sound Files */,
 				CE7EDC591C1CF18F00DF736D /* MonsterMaintenance */,
 				CE7EDC711C1CF18F00DF736D /* MonsterMaintenanceTests */,
 				CE7EDC7C1C1CF19000DF736D /* MonsterMaintenanceUITests */,
@@ -132,6 +143,18 @@
 				CE7EDC7F1C1CF19000DF736D /* Info.plist */,
 			);
 			path = MonsterMaintenanceUITests;
+			sourceTree = "<group>";
+		};
+		CE890ED21C1DF3C70062D72A /* Sound Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE890ED31C1DF3DF0062D72A /* bite.wav */,
+				CE890ED41C1DF3DF0062D72A /* cave-music.mp3 */,
+				CE890ED51C1DF3DF0062D72A /* death.wav */,
+				CE890ED61C1DF3DF0062D72A /* heart.wav */,
+				CE890ED71C1DF3DF0062D72A /* skull.wav */,
+			);
+			name = "Sound Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +261,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE890EDC1C1DF3DF0062D72A /* skull.wav in Resources */,
+				CE890ED81C1DF3DF0062D72A /* bite.wav in Resources */,
+				CE890EDA1C1DF3DF0062D72A /* death.wav in Resources */,
+				CE890EDB1C1DF3DF0062D72A /* heart.wav in Resources */,
+				CE890ED91C1DF3DF0062D72A /* cave-music.mp3 in Resources */,
 				CE7EDC681C1CF18F00DF736D /* LaunchScreen.storyboard in Resources */,
 				CE7EDC651C1CF18F00DF736D /* Assets.xcassets in Resources */,
 				CE7EDC601C1CF18F00DF736D /* Main.storyboard in Resources */,
