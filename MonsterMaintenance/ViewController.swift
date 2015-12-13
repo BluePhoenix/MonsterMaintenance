@@ -45,6 +45,9 @@ class ViewController: UIViewController {
     var soundEffectSkull: AVAudioPlayer?
     var soundEffectDeath: AVAudioPlayer?
     
+    let secondsBetweenNeeds = 4.0
+    let secondsUntilRevival = 10.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -76,20 +79,21 @@ class ViewController: UIViewController {
         }
         monsterIsHappy = false
         
+        generateRandomNeed()
+        
         if currentNumberOfPenalties >= maxNumberOfPenalties {
             currentNeed = -1
             creatureDies()
         }
-        
-        generateRandomNeed()
     }
     
     func creatureDies() {
+        currentNeed = -1
         soundEffectDeath?.play()
         monsterImage.playDeathAnimation()
         gameTimer?.invalidate()
         
-        NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "creatureRevives", userInfo: nil, repeats: false)
+        NSTimer.scheduledTimerWithTimeInterval(secondsUntilRevival, target: self, selector: "creatureRevives", userInfo: nil, repeats: false)
     }
     
     func creatureIdle() {
@@ -126,7 +130,7 @@ class ViewController: UIViewController {
     
     func startGameTimer() {
         monsterImage.playIdleAnimation()
-        gameTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "gameTick", userInfo: nil, repeats: true)
+        gameTimer = NSTimer.scheduledTimerWithTimeInterval(secondsBetweenNeeds, target: self, selector: "gameTick", userInfo: nil, repeats: true)
     }
     
     func generateRandomNeed() {
