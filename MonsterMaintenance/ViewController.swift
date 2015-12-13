@@ -28,6 +28,12 @@ class ViewController: UIViewController {
         }
     }
     
+    var currentNeed = 0 {
+        didSet {
+            updateNeeds()
+        }
+    }
+    
     var gameTimer: NSTimer?
     
     override func viewDidLoad() {
@@ -35,6 +41,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         startGameTimer()
+        generateRandomNeed()
         
         // Set drop target for food and heart to be the monster
         heartButton.dropTarget = monsterImage
@@ -55,6 +62,8 @@ class ViewController: UIViewController {
         if currentNumberOfPenalties >= maxNumberOfPenalties {
             creatureDies()
         }
+        
+        generateRandomNeed()
     }
     
     func creatureDies() {
@@ -75,12 +84,22 @@ class ViewController: UIViewController {
     }
     
     func itemDroppedOnCharacter(notification: NSNotification) {
-        print("Item dropped")
+        print("Item dropped, penalties: \(currentNumberOfPenalties)")
+        currentNumberOfPenalties -= 1
     }
     
     func startGameTimer() {
         monsterImage.playIdleAnimation()
         gameTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "gameTick", userInfo: nil, repeats: true)
+    }
+    
+    func generateRandomNeed() {
+        currentNeed = Int(arc4random_uniform(UInt32(2)))
+    }
+    
+    func updateNeeds() {
+        heartButton.alpha = (currentNeed == 0) ? opaqueAlpha : dimAlpha
+        foodButton.alpha = (currentNeed == 1) ? opaqueAlpha : dimAlpha
     }
     
     func updatePenalties() {
