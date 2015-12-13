@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -36,12 +37,21 @@ class ViewController: UIViewController {
         }
     }
     var monsterIsHappy = true
-    
     var gameTimer: NSTimer?
+
+    var musicPlayer: AVAudioPlayer?
+    var soundEffectFood: AVAudioPlayer?
+    var soundEffectHeart: AVAudioPlayer?
+    var soundEffectSkull: AVAudioPlayer?
+    var soundEffectDeath: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        loadAudioPlayers()
+        
+        musicPlayer?.play()
         
         currentNeed = -1
         startGameTimer()
@@ -121,6 +131,27 @@ class ViewController: UIViewController {
         penalty3Image.alpha = (currentNumberOfPenalties >= 3) ? opaqueAlpha : dimAlpha
         penalty2Image.alpha = (currentNumberOfPenalties >= 2) ? opaqueAlpha : dimAlpha
         penalty1Image.alpha = (currentNumberOfPenalties >= 1) ? opaqueAlpha : dimAlpha
+    }
+    
+    func loadAudioPlayers() {
+        loadPlayer(&self.musicPlayer, fileName: "cave-music", fileType: "mp3", volume: 0.2)
+        loadPlayer(&self.soundEffectFood, fileName: "bite", fileType: "wav", volume: 0.4)
+        loadPlayer(&self.soundEffectHeart, fileName: "heart", fileType: "wav", volume: 0.4)
+        loadPlayer(&self.soundEffectDeath, fileName: "death", fileType: "wav", volume: 0.4)
+        loadPlayer(&self.soundEffectSkull, fileName: "skull", fileType: "wav", volume: 0.4)
+    }
+    
+    func loadPlayer(inout player: AVAudioPlayer?, fileName: String, fileType: String, volume: Float = 1.0) {
+        do {
+            if let pathString = NSBundle.mainBundle().pathForResource(fileName, ofType: fileType) {
+                let fileURL = NSURL(fileURLWithPath: pathString)
+                try player = AVAudioPlayer(contentsOfURL: fileURL)
+                player?.volume = volume
+                player?.prepareToPlay()
+            }
+        } catch let error as NSError {
+            print("Error loading player: \(error.debugDescription)")
+        }
     }
 
 }
