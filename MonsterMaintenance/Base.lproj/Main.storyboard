@@ -3,9 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -56,17 +54,17 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Omw-Oz-1WN">
-                                <rect key="frame" x="176" y="110" width="248" height="120"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Omw-Oz-1WN">
+                                <rect key="frame" x="176" y="84" width="248" height="120"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLJ-q4-bvb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLJ-q4-bvb">
                                         <rect key="frame" x="0.0" y="0.0" width="116" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="qLJ-q4-bvb" secondAttribute="height" multiplier="95:98" id="DpT-ZR-BW6"/>
                                         </constraints>
                                         <state key="normal" image="heart"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mK-tj-fvt">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mK-tj-fvt">
                                         <rect key="frame" x="132" y="0.0" width="116" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="7mK-tj-fvt" secondAttribute="height" multiplier="95:98" id="K5N-5w-3VD"/>
@@ -76,38 +74,43 @@
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="241" verticalHuggingPriority="241" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" image="idle (1)" translatesAutoresizingMaskIntoConstraints="NO" id="m5x-X7-MoW">
-                                <rect key="frame" x="83" y="195" width="434" height="300"/>
+                                <rect key="frame" x="158" y="195" width="434" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="m5x-X7-MoW" secondAttribute="height" multiplier="889:615" id="RuR-VB-kdU"/>
                                 </constraints>
+                                <variation key="widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="28" y="195" width="434" height="300"/>
+                                </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="m5x-X7-MoW" secondAttribute="trailing" constant="8" id="3nC-hG-rv3"/>
+                            <constraint firstItem="sso-t5-Gjd" firstAttribute="top" secondItem="m5x-X7-MoW" secondAttribute="bottom" constant="-15" id="1Au-wh-75G"/>
                             <constraint firstItem="kNW-RS-L57" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4PG-Uw-jUt"/>
                             <constraint firstItem="kNW-RS-L57" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Zt-nz-WXw"/>
+                            <constraint firstItem="m5x-X7-MoW" firstAttribute="width" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Bqj-aK-2TU"/>
                             <constraint firstItem="VNi-02-uvE" firstAttribute="centerY" secondItem="kNW-RS-L57" secondAttribute="centerY" id="HEg-iV-0ZR"/>
                             <constraint firstItem="sso-t5-Gjd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LID-tz-LIH"/>
-                            <constraint firstItem="Omw-Oz-1WN" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kNW-RS-L57" secondAttribute="bottom" constant="4" id="OL6-if-85u"/>
-                            <constraint firstItem="m5x-X7-MoW" firstAttribute="baseline" secondItem="sso-t5-Gjd" secondAttribute="top" constant="15" id="PkD-6l-cUQ"/>
+                            <constraint firstItem="Omw-Oz-1WN" firstAttribute="top" secondItem="kNW-RS-L57" secondAttribute="bottom" constant="4" id="OL6-if-85u"/>
                             <constraint firstAttribute="trailing" secondItem="hfo-xm-E2t" secondAttribute="trailing" id="Rcb-Bd-jMC"/>
                             <constraint firstItem="Omw-Oz-1WN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rdb-ob-ccr"/>
-                            <constraint firstItem="m5x-X7-MoW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="Tn5-1u-9mf"/>
+                            <constraint firstItem="m5x-X7-MoW" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="Tn5-1u-9mf"/>
                             <constraint firstItem="sso-t5-Gjd" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:5" id="WgE-D9-I2l"/>
                             <constraint firstItem="hfo-xm-E2t" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="agy-VW-RNe"/>
                             <constraint firstAttribute="trailing" secondItem="sso-t5-Gjd" secondAttribute="trailing" id="bRf-VI-t3D"/>
-                            <constraint firstItem="m5x-X7-MoW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bZq-EP-zZE"/>
+                            <constraint firstItem="m5x-X7-MoW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="5:4" id="bZq-EP-zZE"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sso-t5-Gjd" secondAttribute="bottom" id="eKU-uc-i9C"/>
                             <constraint firstItem="VNi-02-uvE" firstAttribute="centerX" secondItem="kNW-RS-L57" secondAttribute="centerX" id="exD-l4-BDg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hfo-xm-E2t" secondAttribute="bottom" id="jLV-Ep-yM5"/>
-                            <constraint firstItem="m5x-X7-MoW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="m8Q-Ds-6Aw"/>
                             <constraint firstItem="hfo-xm-E2t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mEP-eH-4L8"/>
                             <constraint firstItem="Omw-Oz-1WN" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:5" id="uf2-eX-egm"/>
                             <constraint firstItem="VNi-02-uvE" firstAttribute="width" secondItem="kNW-RS-L57" secondAttribute="width" multiplier="80:100" id="vwx-gc-MKb"/>
                             <constraint firstItem="kNW-RS-L57" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:10" id="wZE-Ga-qCW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="monsterImage" destination="m5x-X7-MoW" id="l2X-29-cjI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
