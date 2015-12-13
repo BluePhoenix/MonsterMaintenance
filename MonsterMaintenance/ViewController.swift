@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     var currentNumberOfPenalties = 0 {
         didSet {
             updatePenalties()
+            // Ensure greater than 0
+            currentNumberOfPenalties = max(0, currentNumberOfPenalties)
         }
     }
     
@@ -41,7 +43,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         startGameTimer()
-        generateRandomNeed()
         
         // Set drop target for food and heart to be the monster
         heartButton.dropTarget = monsterImage
@@ -80,6 +81,7 @@ class ViewController: UIViewController {
     func creatureRevives() {
         monsterImage.playReviveAnimation()
         currentNumberOfPenalties = 0
+        currentNeed = -1
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "startGameTimer", userInfo: nil, repeats: false)
     }
     
@@ -90,6 +92,7 @@ class ViewController: UIViewController {
     
     func startGameTimer() {
         monsterImage.playIdleAnimation()
+        generateRandomNeed()
         gameTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "gameTick", userInfo: nil, repeats: true)
     }
     
@@ -100,6 +103,9 @@ class ViewController: UIViewController {
     func updateNeeds() {
         heartButton.alpha = (currentNeed == 0) ? opaqueAlpha : dimAlpha
         foodButton.alpha = (currentNeed == 1) ? opaqueAlpha : dimAlpha
+        
+        heartButton.userInteractionEnabled = (currentNeed == 0)
+        foodButton.userInteractionEnabled = (currentNeed == 1)
     }
     
     func updatePenalties() {
