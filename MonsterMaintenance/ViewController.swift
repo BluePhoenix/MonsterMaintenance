@@ -102,11 +102,23 @@ class ViewController: UIViewController {
     }
     
     func itemDroppedOnCharacter(notification: NSNotification) {
+        switch currentNeed {
+        case 0:
+            soundEffectHeart?.play()
+            break
+        case 1:
+            soundEffectFood?.play()
+            break
+        default:
+            break
+        }
+        
         print("Item dropped, penalties: \(currentNumberOfPenalties)")
         gameTimer?.invalidate()
         currentNumberOfPenalties -= 1
         currentNeed = -1
         monsterIsHappy = true
+        
         startGameTimer()
     }
     
