@@ -35,6 +35,7 @@ class ViewController: UIViewController {
             updateNeeds()
         }
     }
+    var monsterIsHappy = true
     
     var gameTimer: NSTimer?
     
@@ -42,6 +43,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        currentNeed = -1
         startGameTimer()
         
         // Set drop target for food and heart to be the monster
@@ -58,9 +60,13 @@ class ViewController: UIViewController {
     
     // 
     func gameTick() {
-        currentNumberOfPenalties += 1
+        if !monsterIsHappy {
+            currentNumberOfPenalties += 1
+        }
+        monsterIsHappy = false
         
         if currentNumberOfPenalties >= maxNumberOfPenalties {
+            currentNeed = -1
             creatureDies()
         }
         
@@ -87,12 +93,15 @@ class ViewController: UIViewController {
     
     func itemDroppedOnCharacter(notification: NSNotification) {
         print("Item dropped, penalties: \(currentNumberOfPenalties)")
+        gameTimer?.invalidate()
         currentNumberOfPenalties -= 1
+        currentNeed = -1
+        monsterIsHappy = true
+        startGameTimer()
     }
     
     func startGameTimer() {
         monsterImage.playIdleAnimation()
-        generateRandomNeed()
         gameTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "gameTick", userInfo: nil, repeats: true)
     }
     
