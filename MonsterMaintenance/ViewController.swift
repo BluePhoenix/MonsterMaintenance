@@ -18,8 +18,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        monsterImage.playIdleAnimation()
-        
         NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "creatureDies", userInfo: nil, repeats: false)
     }
     

@@ -10,6 +10,15 @@ import Foundation
 import UIKit
 
 class MonsterImageView: UIImageView {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.playIdleAnimation()
+    }
+    
     func playIdleAnimation() {
         var arrayOfImages = [UIImage]()
         for i in 1...4 {
