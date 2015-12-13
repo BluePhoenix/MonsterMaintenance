@@ -16,6 +16,7 @@
 		CE7EDC731C1CF18F00DF736D /* MonsterMaintenanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7EDC721C1CF18F00DF736D /* MonsterMaintenanceTests.swift */; };
 		CE7EDC7E1C1CF19000DF736D /* MonsterMaintenanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7EDC7D1C1CF19000DF736D /* MonsterMaintenanceUITests.swift */; };
 		CEB4A2771C1DBC7900704E76 /* DraggableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4A2761C1DBC7900704E76 /* DraggableButton.swift */; };
+		CEB4A2791C1DC98800704E76 /* MonsterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4A2781C1DC98800704E76 /* MonsterImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CE7EDC7D1C1CF19000DF736D /* MonsterMaintenanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMaintenanceUITests.swift; sourceTree = "<group>"; };
 		CE7EDC7F1C1CF19000DF736D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEB4A2761C1DBC7900704E76 /* DraggableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableButton.swift; sourceTree = "<group>"; };
+		CEB4A2781C1DC98800704E76 /* MonsterImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				CE7EDC691C1CF18F00DF736D /* Info.plist */,
 				CE7EDC611C1CF18F00DF736D /* MonsterMaintenance.xcdatamodeld */,
 				CEB4A2761C1DBC7900704E76 /* DraggableButton.swift */,
+				CEB4A2781C1DC98800704E76 /* MonsterImageView.swift */,
 			);
 			path = MonsterMaintenance;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB4A2791C1DC98800704E76 /* MonsterImageView.swift in Sources */,
 				CE7EDC5D1C1CF18F00DF736D /* ViewController.swift in Sources */,
 				CEB4A2771C1DBC7900704E76 /* DraggableButton.swift in Sources */,
 				CE7EDC631C1CF18F00DF736D /* MonsterMaintenance.xcdatamodeld in Sources */,

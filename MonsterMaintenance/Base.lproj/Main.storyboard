@@ -20,8 +20,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="hfo-xm-E2t">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="hfo-xm-E2t">
+                                <rect key="frame" x="0.0" y="-424" width="600" height="1024"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="sso-t5-Gjd">
                                 <rect key="frame" x="0.0" y="480" width="600" height="120"/>
@@ -32,7 +32,7 @@
                                     <constraint firstAttribute="width" secondItem="kNW-RS-L57" secondAttribute="height" multiplier="468:137" id="r4f-jR-PGe"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="241" verticalHuggingPriority="241" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" image="idle (1)" translatesAutoresizingMaskIntoConstraints="NO" id="m5x-X7-MoW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="241" verticalHuggingPriority="241" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" image="idle (1)" translatesAutoresizingMaskIntoConstraints="NO" id="m5x-X7-MoW" customClass="MonsterImageView" customModule="MonsterMaintenance" customModuleProvider="target">
                                 <rect key="frame" x="83" y="195" width="434" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="m5x-X7-MoW" secondAttribute="height" multiplier="889:615" id="RuR-VB-kdU"/>
