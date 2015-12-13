@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        gameTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "gameTick", userInfo: nil, repeats: true)
+        startGameTimer()
         
         // Set drop target for food and heart to be the monster
         heartButton.dropTarget = monsterImage
@@ -54,22 +54,33 @@ class ViewController: UIViewController {
         
         if currentNumberOfPenalties >= maxNumberOfPenalties {
             creatureDies()
-            gameTimer?.invalidate()
         }
     }
     
     func creatureDies() {
         monsterImage.playDeathAnimation()
+        gameTimer?.invalidate()
         
         NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "creatureRevives", userInfo: nil, repeats: false)
+    }
+    
+    func creatureIdle() {
+        monsterImage.playIdleAnimation()
     }
 
     func creatureRevives() {
         monsterImage.playReviveAnimation()
+        currentNumberOfPenalties = 0
+        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "startGameTimer", userInfo: nil, repeats: false)
     }
     
     func itemDroppedOnCharacter(notification: NSNotification) {
         print("Item dropped")
+    }
+    
+    func startGameTimer() {
+        monsterImage.playIdleAnimation()
+        gameTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "gameTick", userInfo: nil, repeats: true)
     }
     
     func updatePenalties() {
