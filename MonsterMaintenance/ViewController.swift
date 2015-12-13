@@ -72,6 +72,7 @@ class ViewController: UIViewController {
     func gameTick() {
         if !monsterIsHappy {
             currentNumberOfPenalties += 1
+            soundEffectSkull?.play()
         }
         monsterIsHappy = false
         
@@ -84,6 +85,7 @@ class ViewController: UIViewController {
     }
     
     func creatureDies() {
+        soundEffectDeath?.play()
         monsterImage.playDeathAnimation()
         gameTimer?.invalidate()
         
