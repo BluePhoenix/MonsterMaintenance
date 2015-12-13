@@ -48,4 +48,22 @@ class MonsterImageView: UIImageView {
         self.animationRepeatCount = 1
         self.startAnimating()
     }
+    
+    func playReviveAnimation() {
+        var arrayOfImages = [UIImage]()
+        // Play death animation in reverse
+        for i in 0...4 {
+            if let image = UIImage(named: "dead\((5-i)).png") {
+                arrayOfImages.append(image)
+                if (5-i) == 1 {
+                    // Set last image as the default when animation completes
+                    self.image = image
+                }
+            }
+        }
+        self.animationImages = arrayOfImages
+        self.animationDuration = 0.8
+        self.animationRepeatCount = 1
+        self.startAnimating()
+    }
 }

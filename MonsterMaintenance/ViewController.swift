@@ -23,8 +23,13 @@ class ViewController: UIViewController {
     
     func creatureDies() {
         monsterImage.playDeathAnimation()
+        
+        NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "creatureRevives", userInfo: nil, repeats: false)
     }
 
+    func creatureRevives() {
+        monsterImage.playReviveAnimation()
+    }
 
 }
 
