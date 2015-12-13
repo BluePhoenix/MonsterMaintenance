@@ -15,6 +15,7 @@
 		CE7EDC681C1CF18F00DF736D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7EDC661C1CF18F00DF736D /* LaunchScreen.storyboard */; };
 		CE7EDC731C1CF18F00DF736D /* MonsterMaintenanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7EDC721C1CF18F00DF736D /* MonsterMaintenanceTests.swift */; };
 		CE7EDC7E1C1CF19000DF736D /* MonsterMaintenanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7EDC7D1C1CF19000DF736D /* MonsterMaintenanceUITests.swift */; };
+		CEB4A2771C1DBC7900704E76 /* DraggableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4A2761C1DBC7900704E76 /* DraggableButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		CE7EDC791C1CF19000DF736D /* MonsterMaintenanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonsterMaintenanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7EDC7D1C1CF19000DF736D /* MonsterMaintenanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMaintenanceUITests.swift; sourceTree = "<group>"; };
 		CE7EDC7F1C1CF19000DF736D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB4A2761C1DBC7900704E76 /* DraggableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				CE7EDC661C1CF18F00DF736D /* LaunchScreen.storyboard */,
 				CE7EDC691C1CF18F00DF736D /* Info.plist */,
 				CE7EDC611C1CF18F00DF736D /* MonsterMaintenance.xcdatamodeld */,
+				CEB4A2761C1DBC7900704E76 /* DraggableButton.swift */,
 			);
 			path = MonsterMaintenance;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE7EDC5D1C1CF18F00DF736D /* ViewController.swift in Sources */,
+				CEB4A2771C1DBC7900704E76 /* DraggableButton.swift in Sources */,
 				CE7EDC631C1CF18F00DF736D /* MonsterMaintenance.xcdatamodeld in Sources */,
 				CE7EDC5B1C1CF18F00DF736D /* AppDelegate.swift in Sources */,
 			);
@@ -488,6 +492,7 @@
 				CE7EDC841C1CF19000DF736D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE7EDC851C1CF19000DF736D /* Build configuration list for PBXNativeTarget "MonsterMaintenanceTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				CE7EDC871C1CF19000DF736D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE7EDC881C1CF19000DF736D /* Build configuration list for PBXNativeTarget "MonsterMaintenanceUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				CE7EDC8A1C1CF19000DF736D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

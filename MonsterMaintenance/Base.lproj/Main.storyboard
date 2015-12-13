@@ -67,14 +67,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Omw-Oz-1WN">
                                 <rect key="frame" x="197" y="151" width="206" height="98"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLJ-q4-bvb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLJ-q4-bvb" customClass="DraggableButton" customModule="MonsterMaintenance" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="98"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="qLJ-q4-bvb" secondAttribute="height" multiplier="95:98" id="DpT-ZR-BW6"/>
                                         </constraints>
                                         <state key="normal" image="heart"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mK-tj-fvt">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mK-tj-fvt" customClass="DraggableButton" customModule="MonsterMaintenance" customModuleProvider="target">
                                         <rect key="frame" x="111" y="0.0" width="95" height="98"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="7mK-tj-fvt" secondAttribute="height" multiplier="95:98" id="K5N-5w-3VD"/>
