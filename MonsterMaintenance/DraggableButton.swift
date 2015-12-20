@@ -35,7 +35,7 @@ class DraggableButton: UIButton {
         
         // Check if we dropped it over the correct target
         if let touch = touches.first, target = dropTarget {
-            let position = touch.locationInView(self.superview)
+            let position = touch.locationInView(self.superview?.superview)
             if CGRectContainsPoint(target.frame, position) {
                 NSNotificationCenter.defaultCenter().postNotificationName("onTargetDropped", object: nil)
             }
